@@ -1,0 +1,128 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg\ img\ 3.jpg');
+}
+
+.navbar {
+    /*background-image: url('header_background.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    background-color:#714e79;
+    display: flex;
+    position: absolute;
+    margin-bottom: 2rem;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 8px 3%;
+    font-family: Arvo;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.nav-links li:hover a {
+    color: #071834;
+}
+
+.login-button {
+    background-color: #1c3050;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.video-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "Rakkas",serif;
+    font-size: 35px;
+}
+  
+p {
+    color: #3d6c89;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.video-controls {
+    margin-top: 20px;
+}
+
+.play-button, .pause-button {
+    background-color: #1c3050;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.play-button:hover, .pause-button:hover {
+    background-color: #154578;
+}
+.spacer {
+    flex-grow: 1; 
+}

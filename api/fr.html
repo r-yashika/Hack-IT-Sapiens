@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video</title>
+</head>
+<body>
+    <h1>Create Video</h1>
+    <textarea id="prompt" placeholder="Enter your prompt"></textarea><br>
+    <button onclick="createVideo()">Create Video</button>
+    <div id="videoContainer"></div>
+
+    <script>
+        async function createVideo() {
+            const prompt = document.getElementById('prompt').value;
+
+            try {
+                const response = await fetch('/create-video', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ prompt })
+                });
+
+                const data = await response.json();
+                const videoUrl = data.videoUrl;
+
+                // Display video URL
+                const videoContainer = document.getElementById('videoContainer');
+                videoContainer.innerHTML = `<p>Video created! <a href="${videoUrl}" target="_blank">View Video</a></p>`;
+            } catch (error) {
+                console.error('Error creating video:', error);
+            }
+        }
+    </script>
+</body>
+</html>
